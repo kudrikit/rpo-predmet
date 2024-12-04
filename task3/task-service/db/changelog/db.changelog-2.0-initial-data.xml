@@ -1,0 +1,17 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2" author="user">
+        <insert tableName="tasks">
+            <column name="title" value="First Task"/>
+            <column name="description" value="This is the first task"/>
+            <column name="deadline_date" value="2024-12-31"/>
+            <column name="status" value="0"/>
+            <column name="user_id" value="1"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

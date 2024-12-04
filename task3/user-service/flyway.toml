@@ -1,0 +1,31 @@
+databaseType = "PostgreSQL"
+id = "65db5832-84e6-49c1-a293-c99038e82ea6"
+name = "user-service"
+
+[environments.development]
+displayName = "Development database"
+password = "admin"
+schemas = [ "user_service_db" ]
+url = "jdbc:postgresql://localhost:5432/user_service_db"
+user = "user_service"
+
+[flyway]
+environment = "development"
+locations = [ "filesystem:./db/migration" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+
+[flyway.check]
+majorTolerance = 0
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[redgateCompare.postgresql.options.ignores]
+ignoreNewlinesInTextObjects = "off"

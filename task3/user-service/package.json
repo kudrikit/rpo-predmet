@@ -1,0 +1,24 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:flyway": "flyway -url=\"jdbc:mysql://localhost:3306/user_service_db?useSSL=false&allowPublicKeyRetrieval=true&passwordCharacterEncoding=utf8\" -user=user_service -password=admin -locations=filesystem:./db/migration migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "child_process": "^1.0.2",
+    "express": "^4.21.1",
+    "flyway": "^0.1.9",
+    "mysql2": "^3.11.3",
+    "pg": "^8.13.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.4"
+  }
+}
